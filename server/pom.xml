@@ -44,31 +44,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-<plugin>
-		<groupId>org.jacoco</groupId>
-		<artifactId>jacoco-maven-plugin</artifactId>
-		<version>0.8.2</version>
-		<configuration>
-			<destFile>${basedir}/target/jacoco-unit.exec</destFile>
-			<dataFile>${basedir}/target/jacoco-unit.exec</dataFile>
-		</configuration>
-		<executions>
-			<execution>
-				<id> jacoco-initialize </id>
-				<goals>
-					<goal>prepare-agent</goal>
-				</goals>
-			</execution>
-			<!-- attached to Maven test phase -->
-			<execution>
-				<id>jacoco-site</id>
-				<phase>test</phase>
-				<goals>
-					<goal>report</goal>
-				</goals>
-			</execution>
-		</executions>
-</plugin>
-   
 
 </project>
